@@ -115,7 +115,7 @@ button:hover {
     </div>
   </form>
   <script>
-    let host = "http://localhost:8080";
+    let host = "https://ducks-service-latest-z32m.onrender.com";
 
     async function signup(){
       let message = "";
@@ -127,7 +127,8 @@ button:hover {
                   method: "POST",
                   headers: {
                       "Content-Type": "application/json",
-                      "Access-Control-Allow-Origin":"*"
+                      "Access-Control-Allow-Origin":"*",
+                      "Access-Control-Allow-Private-Network": "true"
                   },
                   body: JSON.stringify(newUser)
                 };
